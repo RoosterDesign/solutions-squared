@@ -1,0 +1,19 @@
+.site-header {
+  border-bottom: $headerBorderWidth solid $headerBorderColour;
+
+  >.container {
+    align-items: center;
+    display: flex;
+    height: 85px;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: inline-block;
+
+    img {
+      height: 50px;
+    }
+
+  }
+}

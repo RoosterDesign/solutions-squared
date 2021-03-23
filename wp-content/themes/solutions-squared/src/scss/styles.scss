@@ -1,33 +1,14 @@
-@import './components/nav.scss';
-$colour: black;
-body {
-  background-color: $colour;
-  box-shadow: 2px 2px hotpink;
-}
-@media (min-width: 768px) {
-  body {
-    background: blue;
-    box-shadow: 2px 2px red;
-    display: flex;
-    flex: 1;
-  }
-}
+@import './vendor/normalize';
 
-html {
-  background: white;
-}
-@media (min-width: 768px) {
-  html {
-    background: yellow;
-  }
-}
+@import './base/_variables';
+@import './base/_mixins';
+
+@import './components/Header/_header';
+@import './components/Hamburger/_hamburger';
+@import './components/Footer/_footer';
 
 
-
-// @import './vendor/normalize';
 // @import './vendor/owl.carousel';
-// @import './partial/_variables';
-// @import './partial/_mixins';
 // @import './partial/_base';
 // @import './partial/_main';
 // @import './partial/_buttons';
@@ -47,3 +28,61 @@ html {
 // @import './partial/_modal';
 // @import './partial/_download';
 // @import './partial/_schoolSearch';
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $bodyColour;
+  font-family: $bodyFont;
+  font-weight: $fwLight;
+
+  @include mq(tablet-lg) {
+    padding-top: 0;
+  }
+}
+
+.cf {
+  overflow: auto;
+}
+
+.cf::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+p,
+li {
+  line-height: 1.4;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $containerMaxWidth;
+  padding: 0 $containerPaddingMobile;
+
+  @include mq(desktop) {
+    // padding: 0 $containerPaddingDesktop;
+  }
+}

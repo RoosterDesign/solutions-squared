@@ -9,3 +9,18 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+
+	<header class="site-header">
+		<div class="container">
+			<a href="" alt="Solutions Squared" class="site-header__logo">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo.svg" />				
+			</a>
+
+			<button class="hamburger" type="button">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</button> 
+
+		</div>
+	</header>

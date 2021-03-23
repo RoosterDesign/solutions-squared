@@ -1,3 +1,3 @@
-import './components/slider';
+import './components/navigation';
 // import $ from ‘jquery’
 console.log('bundle');
