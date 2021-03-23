@@ -7,6 +7,13 @@ wp-content/*
 !wp-content/mu-plugins/
 !wp-content/plugins/
 !wp-content/themes/
+wp-includes/
+wp-admin/
+/wp-*.php
+/xmlrpc.php
+/license.txt
+/readme.html
+/index.php
 
 # ignore these plugins
 wp-content/plugins/hello.php
