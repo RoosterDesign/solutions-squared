@@ -23,4 +23,28 @@
 			</button> 
 
 		</div>
+
+
+		<nav class="navigation" role="navigation">
+		<ul>
+			<li>
+				<a href="#services" title="Services">Services</a>
+			</li>
+			<li>
+				<a href="#sectors" title="Sectors">Sectors</a>
+			</li>
+			<li>
+				<a href="#learning" title="Learning">Learning</a>
+			</li>
+			<li>
+				<a href="#about" title="About">About</a>
+			</li>
+			<li>
+				<a href="#news" title="News">News</a>
+			</li>
+			<li>
+				<a href="#contact" title="Contact">Contact</a>
+			</li>
+		</ul>
+		</nav>
 	</header>
