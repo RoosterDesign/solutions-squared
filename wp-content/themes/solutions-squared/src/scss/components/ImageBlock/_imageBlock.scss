@@ -1,0 +1,16 @@
+.image-block { 
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 100px 0;
+
+  > .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}

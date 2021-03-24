@@ -26,25 +26,27 @@
 
 
 		<nav class="navigation" role="navigation">
-		<ul>
-			<li>
-				<a href="#services" title="Services">Services</a>
-			</li>
-			<li>
-				<a href="#sectors" title="Sectors">Sectors</a>
-			</li>
-			<li>
-				<a href="#learning" title="Learning">Learning</a>
-			</li>
-			<li>
-				<a href="#about" title="About">About</a>
-			</li>
-			<li>
-				<a href="#news" title="News">News</a>
-			</li>
-			<li>
-				<a href="#contact" title="Contact">Contact</a>
-			</li>
-		</ul>
+			<div class="container">
+				<ul class="navigation-list">
+					<li class="navigation-list__item">
+						<a href="#services" title="Services" class="navigation-list__link">Services</a>
+					</li>
+					<li class="navigation-list__item">
+						<a href="#sectors" title="Sectors" class="navigation-list__link">Sectors</a>
+					</li>
+					<li class="navigation-list__item">
+						<a href="#learning" title="Learning" class="navigation-list__link">Learning</a>
+					</li>
+					<li class="navigation-list__item">
+						<a href="#about" title="About" class="navigation-list__link">About</a>
+					</li>
+					<li class="navigation-list__item">
+						<a href="#news" title="News" class="navigation-list__link">News</a>
+					</li>
+					<li class="navigation-list__item">
+						<a href="#contact" title="Contact" class="navigation-list__link">Contact</a>
+					</li>
+				</ul>
+			</div>
 		</nav>
 	</header>
