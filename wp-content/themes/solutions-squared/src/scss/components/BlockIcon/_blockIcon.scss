@@ -1,9 +1,35 @@
 .block-icon {
-  margin-bottom: 30px;
+  display: block;
+  margin: 0 auto 30px;
 
   &.-monitor {
     height: 53px;
     width: 63px;
+  }
+
+  &.-padlock {
+    height: 62px;
+    width: 48px;
+  }
+
+  &.-info {
+    height: 62px;
+    width: 62px;
+  }
+
+  &.-globe {
+    height: 62px;
+    width: 62px;
+  }
+
+  &.-drive {
+    height: 62px;
+    width: 54px;
+  }
+
+  &.-lightbulb {
+    height: 62px;
+    width: 42px;
   }
 
 }

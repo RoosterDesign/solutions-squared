@@ -1,16 +1,56 @@
 .image-block { 
+  align-items: center;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   color: $white;
+  display: flex;
   margin: 0 auto;
   max-width: 1920px;
+  min-height: 780px;
   padding: 100px 0;
+  position: relative;
+  text-align: center;
+
+  &.-hasMask:after {
+    background: rgba(48,48,48,.7);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;    
+  }
 
   > .container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     display: flex;
+    position: relative;
+    z-index: 1;
   }
+
+  &__title {
+    font-size: 6rem;
+    font-weight: $fwBold;    
+    margin-bottom: 30px;
+  }
+
+  &__sub-title {
+    font-size: 2.5rem;
+    font-weight: $fwBold;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+  }
+
 }
