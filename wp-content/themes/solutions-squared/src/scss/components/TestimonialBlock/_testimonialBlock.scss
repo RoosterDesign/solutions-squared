@@ -1,0 +1,36 @@
+.testimonials-block {
+  padding: 80px 0;
+
+  .slick-dots {
+    font-size: 0;
+    list-style: none;
+    margin: 50px 0 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    button {
+      background: none;
+      border: 1px solid $sliderDotBorderColour;
+      border-radius: 50%;
+      cursor: pointer;
+      display: block;
+      height: 10px;
+      margin: 0;
+      outline: none;
+      padding: 0;
+      width: 10px;
+    }
+
+    li.slick-active button {
+      background: $sliderDotActiveBgColour;
+      border-color: $sliderDotActiveBorderColour;
+    }
+
+  }
+
+}

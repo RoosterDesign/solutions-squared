@@ -1,0 +1,13 @@
+.title {
+  font-size: 6rem;
+  font-weight: $fwSemiBold;    
+  margin-bottom: 30px;
+  text-align: center;
+
+  &.-imgTitle {
+    font-size: 6rem;
+    font-weight: $fwBold;    
+    margin-bottom: 30px;
+  }
+
+}

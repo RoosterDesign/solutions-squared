@@ -3,14 +3,21 @@
 @import './base/_variables';
 @import './base/_mixins';
 
+@import './plugins/slick-slider';
+
 @import './components/Header/_header';
 @import './components/Hamburger/_hamburger';
 @import './components/Navigation/_navigation';
+@import './components/Title/title';
 @import './components/ImageBlock/_imageBlock';
 @import './components/BlockIcon/_blockIcon';
 @import './components/ImageBlockNav/_imageBlockNav';
 @import './components/TextBlock/_textBlock';
 @import './components/Button/_button';
+@import './components/TestimonialBlock/_testimonialBlock';
+@import './components/Testimonial/_testimonial';
+@import './components/NewsBlock/_newsBlock';
+@import './components/ContactBlock/_contactBlock';
 @import './components/Footer/_footer';
 
 html {

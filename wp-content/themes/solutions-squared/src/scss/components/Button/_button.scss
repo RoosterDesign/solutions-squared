@@ -1,14 +1,25 @@
 .btn {
   background: $buttonBgColour;
-  color: $buttonColour;
-  display: inline-flex;
-  font-size: 2.5rem;
-  justify-content: space-between;
+  color: $buttonColour;  
+  font-size: 2.5rem;  
   text-decoration: none;
   transition: background-color .15s ease-in-out;
   margin: 0;
   min-width: 200px;
   padding: 12px 20px;
+
+  &.-hasChevron {
+    justify-content: center;
+    display: inline-flex;
+    justify-content: space-between;
+  }
+
+  &.-centre {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+  }
 
   &:hover {
     background: $buttonHoverBgColour;
