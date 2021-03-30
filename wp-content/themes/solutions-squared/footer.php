@@ -8,6 +8,14 @@
   </div>
 </footer>
 
+
 <?php wp_footer(); ?>
+
+<script>
+  (function($) {
+	  console.log($);
+  })( jQuery );
+</script>
+
 </body>
 </html>

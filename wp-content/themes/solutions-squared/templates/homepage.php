@@ -6,28 +6,28 @@ get_header(); ?>
 
 
   <!-- Image Block -->
-  <section class="image-block" id="" style="background-image: url('https://placeimg.com/1000/500/nature')">
+  <section class="image-block" id="block1" style="background-image: url('https://placeimg.com/1000/500/nature')">
     <div class="container">    
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/icons/monitor.svg" alt="IT Managed Services" class="block-icon -monitor" />
       <h1 class="title -imgTitle">IT Managed Services</h1>
       <ul class="image-block-nav">
         <li class="image-block-nav__item">
-          <a href="#deploy" title="" class="btn -hasChevron js-reveal-link">Deploy<span class="btn__chevron"></span></a>
+          <a href="#deploy" title="" class="btn -hasChevron js-reveal-link" data-link-parent="block1">Deploy<span class="btn__chevron"></span></a>
         </li>
         <li class="image-block-nav__item">
-          <a href="#secure" title="" class="btn -hasChevron js-reveal-link">Secure<span class="btn__chevron"></span></a>
+          <a href="#secure" title="" class="btn -hasChevron js-reveal-link" data-link-parent="block1">Secure<span class="btn__chevron"></span></a>
         </li>
         <li class="image-block-nav__item">
-          <a href="#support" title="" class="btn -hasChevron js-reveal-link">Support<span class="btn__chevron"></span></a>
+          <a href="#support" title="" class="btn -hasChevron js-reveal-link" data-link-parent="block1">Support<span class="btn__chevron"></span></a>
         </li>
 
         <li class="lineBreak"></li>
 
         <li class="image-block-nav__item">
-          <a href="#backup" title="" class="btn -hasChevron js-reveal-link">Backup<span class="btn__chevron"></span></a>
+          <a href="#backup" title="" class="btn -hasChevron js-reveal-link" data-link-parent="block1">Backup<span class="btn__chevron"></span></a>
         </li>
         <li class="image-block-nav__item">
-          <a href="#review" title="" class="btn -hasChevron js-reveal-link">Review<span class="btn__chevron"></span></a>
+          <a href="#review" title="" class="btn -hasChevron js-reveal-link" data-link-parent="block1">Review<span class="btn__chevron"></span></a>
         </li>
         <li class="image-block-nav__item">
           <a href="#enhance" title="" class="btn -hasChevron js-reveal-link">Enhance<span class="btn__chevron"></span></a>
@@ -36,9 +36,28 @@ get_header(); ?>
     </div>
   </section>
 
-  <section class="reveal-block" data-reveal="deploy" style="display: none;">
-    <div class="container">
-      <h1 class="title">Why do you need security?</h1>
+  <section class="reveal-block" data-reveal="deploy" data-parent="block1" style="display: none;">
+    <span class="reveal-block__close js-close-reveal">CLOSE</span>
+    <div class="container">      
+      <h1 class="title">Deploy</h1>
+      <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
+      <p>However, the GDPR provides more specifics about what you have to do about the security of your processing and how you should assess your information risk and put appropriate security measures in place. Whilst these are broadly equivalent to what was considered good and best practice under the 1998 Act, they are now a legal requirement.</p>
+    </div>
+  </section>
+
+  <section class="reveal-block" data-reveal="secure" data-parent="block1" style="display: none;">
+    <span class="reveal-block__close js-close-reveal">CLOSE</span>
+    <div class="container">      
+      <h1 class="title">Secure</h1>
+      <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
+      <p>However, the GDPR provides more specifics about what you have to do about the security of your processing and how you should assess your information risk and put appropriate security measures in place. Whilst these are broadly equivalent to what was considered good and best practice under the 1998 Act, they are now a legal requirement.</p>
+    </div>
+  </section>
+
+  <section class="reveal-block" data-reveal="support" data-parent="block1" style="display: none;">
+    <span class="reveal-block__close js-close-reveal">CLOSE</span>
+    <div class="container">      
+      <h1 class="title">Support</h1>
       <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
       <p>However, the GDPR provides more specifics about what you have to do about the security of your processing and how you should assess your information risk and put appropriate security measures in place. Whilst these are broadly equivalent to what was considered good and best practice under the 1998 Act, they are now a legal requirement.</p>
     </div>
