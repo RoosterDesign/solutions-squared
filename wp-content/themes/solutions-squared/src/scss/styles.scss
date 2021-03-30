@@ -18,6 +18,9 @@
 @import './components/Testimonial/_testimonial';
 @import './components/NewsBlock/_newsBlock';
 @import './components/ContactBlock/_contactBlock';
+@import './components/NewsItemsWrap/newsItemsWrap';
+@import './components/NewsItem/newsItem';
+@import './components/RevealBlock/revealBlock';
 @import './components/Footer/_footer';
 
 html {
@@ -35,7 +38,10 @@ body {
   color: $bodyColour;
   font-family: $bodyFont;
   font-weight: $fwLight;
-
+  padding-top: $mobileHeaderHeight;
+  @include mq(tablet) {
+    padding-top: $desktopHeaderHeight;
+  }
   @include mq(tablet-lg) {
     padding-top: 0;
   }

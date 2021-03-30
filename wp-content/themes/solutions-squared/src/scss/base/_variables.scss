@@ -23,10 +23,18 @@ $bodyColour: $black;
 // $linkHoverColour: $black;
 
 
+// Links
+$linkColour: $brandOrange;
+$linkHoverColour: $black;
+
 // Header
+$mobileHeaderHeight: 65px;
+$desktopHeaderHeight: 85px;
 $headerBorderColour: #cbcbcb;
 $headerBorderWidth: 1px;
 $hamburgerColour: $brandOrange;
+$headerLinkColour: $bodyColour;
+$headerLinkHoverColour: $brandOrange;
 
 // Nav
 $navLinkColour: $white;

@@ -10,6 +10,7 @@
 
   > .container {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
   }
 
@@ -44,10 +45,10 @@ body.nav-open .navigation {
   &__link {
     color: $navLinkColour;
     display: block;
-    font-size: 4rem;
+    font-size: 3.8rem;
     font-weight: $fwBold;
     line-height: 1;
-    padding: 12px 0;
+    padding: 10px 0;
     text-decoration: none;
     text-align: right;
     transition: all .15s ease-in-out;
@@ -73,13 +74,31 @@ body.nav-open .navigation {
       padding-top: 15px;
       padding-bottom: 15px;
     }
+  
+    &.-small {
+      font-size: 2rem;
+      padding: 10px 0;
+      @include mq(mobile-lg) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+
   }
+
 
   &__link:hover {
     @include mq(desktop) {
       padding-left: 16px;
       padding-right: 0;
       opacity: 1 !important;
+    }
+  }
+
+  &.-remoteLinks {
+    margin: 20px 0 0;
+    @include mq(tablet) {
+      display: none;
     }
   }
   

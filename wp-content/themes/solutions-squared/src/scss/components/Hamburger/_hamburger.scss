@@ -18,11 +18,11 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.hamburger.is-active {
+.hamburger.-isActive {
   z-index: 99;
 }
 
-.hamburger.is-active .hamburger-inner {
+.hamburger.-isActive .hamburger-inner {
   transform: rotate(225deg);
   transition-delay: 0.12s;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -30,19 +30,19 @@
 
 
 
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
+.hamburger.-isActive .hamburger-inner,
+.hamburger.-isActive .hamburger-inner::before,
+.hamburger.-isActive .hamburger-inner::after {
   background-color: $white;
 }
 
-.hamburger.is-active .hamburger-inner::before {
+.hamburger.-isActive .hamburger-inner::before {
   top: 0;
   opacity: 0;
   transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
 }
 
-.hamburger.is-active .hamburger-inner::after {
+.hamburger.-isActive .hamburger-inner::after {
   bottom: 0;
   transform: rotate(-90deg);
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);

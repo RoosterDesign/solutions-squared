@@ -1,0 +1,38 @@
+.news-item {
+  width: calc(33.333333% - 5px);
+
+  &__img {
+    display: block;
+    height: auto;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  &__title,
+  p {
+    padding-right: 20px;
+  }
+
+  &__title {
+    font-size: 3.4rem;
+    font-weight: $fwSemiBold;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    color: $linkColour;
+    font-size: 2.5rem;
+    font-weight: $fwSemiBold;
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    color: $linkHoverColour;
+  }
+
+}
