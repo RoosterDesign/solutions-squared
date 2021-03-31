@@ -36,8 +36,8 @@ get_header(); ?>
     </div>
   </section>
 
-  <section class="reveal-block" data-reveal="deploy" data-parent="block1" style="display: none;">
-    <span class="reveal-block__close js-close-reveal">CLOSE</span>
+  <section class="reveal-block" data-reveal="deploy" data-parent="block1">
+    <span class="reveal-block__close js-close-reveal"></span>
     <div class="container">      
       <h1 class="title">Deploy</h1>
       <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
@@ -45,8 +45,8 @@ get_header(); ?>
     </div>
   </section>
 
-  <section class="reveal-block" data-reveal="secure" data-parent="block1" style="display: none;">
-    <span class="reveal-block__close js-close-reveal">CLOSE</span>
+  <section class="reveal-block" data-reveal="secure" data-parent="block1">
+    <span class="reveal-block__close js-close-reveal"></span>
     <div class="container">      
       <h1 class="title">Secure</h1>
       <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
@@ -54,8 +54,8 @@ get_header(); ?>
     </div>
   </section>
 
-  <section class="reveal-block" data-reveal="support" data-parent="block1" style="display: none;">
-    <span class="reveal-block__close js-close-reveal">CLOSE</span>
+  <section class="reveal-block" data-reveal="support" data-parent="block1">
+    <span class="reveal-block__close js-close-reveal"></span>
     <div class="container">      
       <h1 class="title">Support</h1>
       <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>

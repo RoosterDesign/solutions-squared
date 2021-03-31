@@ -1,6 +1,7 @@
 // Colours
 $white: #fff;
 $black: #000;
+$darkGrey: #3c3636;
 $brandOrange: #f38025;
 
 // Container
@@ -43,12 +44,16 @@ $navLinkHoverColour: $white;
 // Buttons
 $buttonBgColour: $brandOrange;
 $buttonColour: $white;
-$buttonHoverBgColour: #3c3636;
+$buttonHoverBgColour: $darkGrey;
+$buttonActiveBgColour: $darkGrey;
 
 // Slick Slider
 $sliderDotBorderColour: $black;
 $sliderDotActiveBorderColour: $brandOrange;
 $sliderDotActiveBgColour: $brandOrange;
+
+// Reveal blocks
+$revealBgColour: $darkGrey;
 
 
 // Footer

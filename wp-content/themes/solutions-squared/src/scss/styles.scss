@@ -42,9 +42,6 @@ body {
   @include mq(tablet) {
     padding-top: $desktopHeaderHeight;
   }
-  @include mq(tablet-lg) {
-    padding-top: 0;
-  }
 }
 
 .cf {
