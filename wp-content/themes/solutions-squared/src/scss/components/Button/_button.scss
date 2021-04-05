@@ -1,17 +1,27 @@
 .btn {
   background: $buttonBgColour;
-  color: $buttonColour;  
-  font-size: 2.5rem;  
+  color: $buttonColour;
+  display: block;
+  font-size: $fontSize--sm;
   text-decoration: none;
   transition: background-color .15s ease-in-out;
   margin: 0;
-  min-width: 200px;
   padding: 12px 20px;
+  width: 100%;
+  @include mq(tablet) {
+    font-size: $fontSize--md;
+    min-width: 200px;
+  }
+  @include mq(desktop) {
+      font-size: $fontSize--lg;
+  }   
 
   &.-hasChevron {
+    align-items: center;
     justify-content: center;
     display: inline-flex;
     justify-content: space-between;
+    text-align: left;
   }
 
   &.-centre {

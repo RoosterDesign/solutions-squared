@@ -1,35 +1,63 @@
 .block-icon {
   display: block;
-  margin: 0 auto 30px;
+  height: auto;
+  margin: 0 auto 20px;
+  @include mq(tablet) {
+    margin-bottom: 30px;
+  }
 
   &.-monitor {
-    height: 53px;
-    width: 63px;
+    // height: 42px;
+    width: 50px;
+    @include mq(tablet) {
+      // height: 53px;
+      width: 63px;
+    }
   }
 
   &.-padlock {
-    height: 62px;
-    width: 48px;
+    // height: 45px;
+    width: 35px;
+    @include mq(tablet) {
+      // height: 62px;
+      width: 48px;      
+    }
   }
 
   &.-info {
-    height: 62px;
-    width: 62px;
+    // height: 52px;
+    width: 52px;
+    @include mq(tablet) {
+      // height: 62px;
+      width: 62px;      
+    }
   }
 
   &.-globe {
-    height: 62px;
-    width: 62px;
+    // height: 52px;
+    width: 52px;
+    @include mq(tablet) {
+      // height: 62px;
+     width: 62px;
+    }
   }
 
   &.-drive {
-    height: 62px;
-    width: 54px;
+    // height: 62px;
+    width: 44px;
+    @include mq(tablet) {
+      // height: 62px;
+      width: 54px;      
+    }
   }
 
   &.-lightbulb {
-    height: 62px;
+    // height: 62px;
     width: 42px;
+    @include mq(tablet) {
+      // height: 62px;
+      width: 42px;      
+    }
   }
 
 }

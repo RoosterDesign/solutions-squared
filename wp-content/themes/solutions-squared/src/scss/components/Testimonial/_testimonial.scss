@@ -1,27 +1,53 @@
 .testimonial {
   display: block !important;
   margin: 0 auto;
+  padding: 0 20px;
   max-width: 1060px;
   text-align: center;
 
   p {
-    font-size: 4.6rem;
+    font-size: 2.4rem;
     font-weight: $fwSemiBold;
     line-height: 1.2;
+    @include mq(tablet) {
+      font-size: 3rem;
+    }    
+    @include mq(desktop) {
+      font-size: 4.6rem;
+    } 
   }
 
   &__company,
   &__author {
     display: block;
-    font-size: 3.4rem;
+    font-size: 2rem;
+    line-height: 1.2;
+    @include mq(tablet) {
+      font-size: 2.8rem;
+    }
+    @include mq(desktop) {
+      font-size: 3.4rem;
+    }
   }
 
   &__company {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    @include mq(tablet) {
+      margin-bottom: 40px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 50px;
+    }
   }
 
   &__author {
-    margin-top: 50px;
+    margin-top: 20px;
+    @include mq(tablet) {
+      margin-top: 40px;
+    }
+    @include mq(desktop) {
+      margin-top: 50px;
+    }
   }
 
 }

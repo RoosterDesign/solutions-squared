@@ -2,6 +2,7 @@
 
 @import './base/_variables';
 @import './base/_mixins';
+@import './base/_animations';
 
 @import './plugins/slick-slider';
 
@@ -16,11 +17,12 @@
 @import './components/Button/_button';
 @import './components/TestimonialBlock/_testimonialBlock';
 @import './components/Testimonial/_testimonial';
-@import './components/NewsBlock/_newsBlock';
 @import './components/ContactBlock/_contactBlock';
 @import './components/NewsItemsWrap/newsItemsWrap';
 @import './components/NewsItem/newsItem';
 @import './components/RevealBlock/revealBlock';
+@import './components/iFrameEmbed/iFrameEmbed';
+@import './components/TwitterFeed/twitterFeed';
 @import './components/Footer/_footer';
 
 html {
@@ -74,6 +76,7 @@ li {
   margin: 0 auto;
   max-width: $containerMaxWidth;
   padding: 0 $containerPaddingMobile;
+  width: 100%;
 
   @include mq(desktop) {
     // padding: 0 $containerPaddingDesktop;

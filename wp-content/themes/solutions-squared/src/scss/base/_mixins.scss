@@ -24,3 +24,15 @@ $breakpoints: (mobile-lg: 375px,
         @content;
     }
 }
+
+@mixin pStyles {
+    font-size: $fontSize--sm;
+    margin-bottom: 30px;
+    @include mq(tablet) {
+        font-size: $fontSize--md;
+        margin-bottom: 30px;
+    }
+    @include mq(desktop) {
+        font-size: $fontSize--lg;
+    }
+}

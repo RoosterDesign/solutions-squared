@@ -7,10 +7,17 @@
   display: flex;
   margin: 0 auto;
   max-width: 1920px;
-  min-height: 780px;
-  padding: 100px 0;
+  padding: 50px 0;
   position: relative;
   text-align: center;
+  @include mq(tablet) {
+    min-height: 600px;
+    padding: 80px 0;
+  }
+  @include mq(desktop) {
+    min-height: 780px;
+    padding: 100px 0;
+  }
 
   &.-hasMask:after {
     background: rgba(48,48,48,.7);
@@ -32,14 +39,12 @@
   }
 
   &__sub-title {
-    font-size: 2.5rem;
-    font-weight: $fwBold;
-    margin-bottom: 30px;
+    @include pStyles;
+    font-weight: $fwBold;    
   }
 
   p {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    @include pStyles;
 
     &:last-of-type {
       margin-bottom: 0;

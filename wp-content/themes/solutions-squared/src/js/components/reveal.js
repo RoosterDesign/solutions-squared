@@ -13,23 +13,6 @@ function showReveal() {
 
   // Close all open blocks of a group
   closeAllBlocks = (parentBlockId, revealBlock) =>  jQuery('.reveal-block.-isOpen[data-parent='+parentBlockId+']').slideUp(slideDuration, function() { openSepcificBlock(revealBlock) }).removeClass('-isOpen');
-  
-  // Open reveal block
-  openReveal = (revealBlock, parentBlockId) => {
-    if(anyOpen(parentBlockId)) {
-      closeAllBlocks(parentBlockId, revealBlock)
-    } else {
-      openSepcificBlock(revealBlock)
-    };
-    console.info('scroll to reveal');
-    scrollToReveal(parentBlockId);
-  };
-
-  closeReveal = (revealBlock, parentBlockId) => {
-    revealBlock.removeClass('-isOpen');
-    revealBlock.slideUp(slideDuration).removeClass('-isOpen');
-    scrollToParent(parentBlockId);
-  };
 
   //  Add active class
   addActiveClass = openBtn => openBtn.classList.add('-isActive');
@@ -39,13 +22,32 @@ function showReveal() {
 
   // Scroll to reveal block
   scrollToReveal = parentBlockId => {
-    jQuery("html, body").animate({ scrollTop: jQuery('#'+parentBlockId).outerHeight() }, scrollDuration);
-  }
+    const targetEl = jQuery('#'+parentBlockId);
+    const bottomofEl = targetEl.position().top + targetEl.outerHeight() - getOffset();
+    jQuery("html, body").animate({ scrollTop: bottomofEl }, scrollDuration);
+  };
 
   // Scroll back to parent block
-  scrollToParent = parentBlockId => {
-    jQuery("html, body").animate({ scrollTop: jQuery('#'+parentBlockId).offset().top - getOffset() }, scrollDuration);
-  }
+  scrollToParent = parentBlockId => jQuery("html, body").animate({ scrollTop: jQuery('#'+parentBlockId).offset().top - getOffset() }, scrollDuration);
+  
+  // Open reveal block
+  openReveal = (revealBlock, parentBlockId) => {
+    if(anyOpen(parentBlockId)) {
+      closeAllBlocks(parentBlockId, revealBlock)
+    } else {
+      openSepcificBlock(revealBlock)
+    };
+    console.info('scroll to reveal ', parentBlockId);
+    scrollToReveal(parentBlockId);
+  };
+
+  closeReveal = (revealBlock, parentBlockId) => {
+    revealBlock.removeClass('-isOpen');
+    revealBlock.slideUp(slideDuration).removeClass('-isOpen');
+    scrollToParent(parentBlockId);
+  };
+
+
 
   // ====================
   // CLICK EVENTS
