@@ -35,16 +35,21 @@ body.nav-open .navigation {
     padding-right: 0;
   }
 
-  &:hover .navigation-list__link {
-    @include mq(desktop) {
-      opacity: .5;
-      transition: all .15s ease-in-out;
-    }
+  // &:hover .navigation-list__link {
+  //   @include mq(desktop) {
+  //     opacity: .5;
+  //     transition: all .15s ease-in-out;
+  //   }
+  // }
+
+  &__item {
+    display: flex;
+    justify-content: flex-end;
   }
 
   &__link {
     color: $navLinkColour;
-    display: block;
+    display: inline-block;
     font-size: 3.8rem;
     font-weight: $fwBold;
     line-height: 1;

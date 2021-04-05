@@ -4,11 +4,66 @@
   display: none;
   margin: 0 auto;
   max-width: 1920px;
-  padding: 100px 0;
+  padding: 50px 0;
   position: relative;
+  @include mq(tablet) {
+    padding: 80px 0;
+  }
+  @include mq(desktop) {
+    padding: 100px 0;
+  }
 
-  p {
+  h1 {
+    @extend .title;
+    margin-bottom: 40px;
+  }
+
+  h2, h3, h4, h5, h6 {
+    @extend .image-block__sub-title;    
+    margin-top: 40px;
+    @include mq(tablet) {
+      margin-top: 60px;
+    }
+  }
+
+  h1 + h2,
+  h1 + h3,
+  h1 + h4,
+  h1 + h5,
+  h1 + h6 {
+    margin-top: 0;
+  }
+
+  p, li {
     @include pStyles;
+  }
+
+  ul, ol {
+    margin: 0 0 30px;
+
+    li {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  a {
+    color: $linkColour;
+    text-decoration: none;
+  }
+
+  blockquote {
+    border-left: 3px solid $brandOrange;
+    margin: 40px 0;
+    padding: 0 0 0 30px;
+    @include mq(tablet) {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   &__close {
@@ -16,22 +71,32 @@
     cursor: pointer;
     justify-content: center;
     display: flex;
-    height: 40px;
+    height: 30px;
     opacity: .4;
     position: absolute;
     transition: opacity .3s ease-in-out;
-    right: 40px;
-    top: 40px;
-    width: 40px;
+    right: 30px;
+    top: 30px;
+    width: 30px;
+    @include mq(tablet) {
+      height: 40px;
+      right: 40px;
+      top: 40px;
+      width: 40px;
+    }
 
     &:before,
     &:after {
       background: $white;
       content: '';
       display: block;
-      height: 6px;
+      height: 3px;
       position: absolute;
-      width: 40px;
+      width: 30px;
+      @include mq(tablet) {
+        height: 6px;
+        width: 40px;
+      }
     }
 
     &:before {

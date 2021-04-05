@@ -11,7 +11,16 @@ get_header(); ?>
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/icons/monitor.svg" alt="IT Managed Services" class="block-icon -monitor" />
       <h1 class="title -imgTitle">IT Managed Services</h1>
       <ul class="image-block-nav">
-        <li class="image-block-nav__item">
+
+      <?php $args = array( 'post_type' => 'it_managed_services', 'posts_per_page' => 999 ); $the_query = new WP_Query( $args );
+        if ( $the_query->have_posts() ) :
+          while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <li class="image-block-nav__item">
+              <a href="#<?php the_field('subsection_id'); ?>" title="" class="btn -hasChevron js-reveal-link" data-link-parent="services"><?php the_field('subsection_buttonLabel'); ?><span class="btn__chevron"></span></a>
+            </li>        
+      <?php endwhile; wp_reset_postdata(); endif; ?>
+
+        <!-- <li class="image-block-nav__item">
           <a href="#deploy" title="" class="btn -hasChevron js-reveal-link" data-link-parent="services">Deploy<span class="btn__chevron"></span></a>
         </li>
         <li class="image-block-nav__item">
@@ -29,43 +38,31 @@ get_header(); ?>
         </li>
         <li class="image-block-nav__item">
           <a href="#enhance" title="" class="btn -hasChevron js-reveal-link">Enhance<span class="btn__chevron"></span></a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </section>
 
-  <section class="reveal-block" data-reveal="deploy" data-parent="services">
-    <span class="reveal-block__close js-close-reveal"></span>
-    <div class="container fade-in-down">      
-      <h1 class="title">Deploy</h1>
-      <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
-      <p>However, the GDPR provides more specifics about what you have to do about the security of your processing and how you should assess your information risk and put appropriate security measures in place. Whilst these are broadly equivalent to what was considered good and best practice under the 1998 Act, they are now a legal requirement.</p>
-    </div>
-  </section>
 
-  <section class="reveal-block" data-reveal="secure" data-parent="services">
-    <span class="reveal-block__close js-close-reveal"></span>
-    <div class="container fade-in-down">
-      <h1 class="title">Secure</h1>
-      <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
-      <p>However, the GDPR provides more specifics about what you have to do about the security of your processing and how you should assess your information risk and put appropriate security measures in place. Whilst these are broadly equivalent to what was considered good and best practice under the 1998 Act, they are now a legal requirement.</p>
-    </div>
-  </section>
-
-  <section class="reveal-block" data-reveal="support" data-parent="services">
-    <span class="reveal-block__close js-close-reveal"></span>
-    <div class="container fade-in-down">      
-      <h1 class="title">Support</h1>
-      <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
-      <p>However, the GDPR provides more specifics about what you have to do about the security of your processing and how you should assess your information risk and put appropriate security measures in place. Whilst these are broadly equivalent to what was considered good and best practice under the 1998 Act, they are now a legal requirement.</p>
-    </div>
-  </section>
-
+  <?php $args = array( 'post_type' => 'it_managed_services', 'posts_per_page' => 999 ); $the_query = new WP_Query( $args );
+    if ( $the_query->have_posts() ) :
+      while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+        <section class="reveal-block" data-reveal="<?php the_field('subsection_id'); ?>" data-parent="services">
+          <span class="reveal-block__close js-close-reveal"></span>
+          <div class="container fade-in-down">      
+            <?php the_field('subsection_content'); ?>
+          </div>
+        </section>
+    <?php endwhile; wp_reset_postdata(); endif; ?>
   <!-- End: Image Block -->
+
+  
+
+
 
 
   <!-- Text Block -->
-  <section class="text-block" id="">
+  <section class="text-block" id="learning">
     <div class="container">    
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/icons/padlock.svg" alt="Why do you need security?" class="block-icon -padlock" />
       <h1 class="title">Why do you need security?</h1>
@@ -82,7 +79,7 @@ get_header(); ?>
 
 
   <!-- Image Block -->
-  <section class="image-block" id="security" style="background-image: url('https://placeimg.com/1000/500/nature')">
+  <section class="image-block" id="sectors" style="background-image: url('https://placeimg.com/1000/500/nature')">
     <div class="container">    
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/icons/info-white.svg" alt="Managed IT Security Services" class="block-icon -info" />
       <h1 class="title -imgTitle">Managed IT Security Services</h1>
@@ -209,7 +206,7 @@ get_header(); ?>
 
 
 <!-- Image Block -->
-  <section class="image-block -hasMask" id="" style="background-image: url('https://placeimg.com/1000/500/nature')">
+  <section class="image-block -hasMask" id="about" style="background-image: url('https://placeimg.com/1000/500/nature')">
     <div class="container">    
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/icons/lightbulb-white.svg" alt="Partner Services" class="block-icon -lightbulb" />
       <h1 class="title -imgTitle">Partner Services</h1>
