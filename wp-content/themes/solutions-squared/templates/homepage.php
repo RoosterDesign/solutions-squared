@@ -5,60 +5,39 @@ Template Name: Homepage
 get_header(); ?>
 
 
-  <!-- Image Block -->
-  <section class="image-block" id="services" style="background-image: url('https://placeimg.com/1000/500/nature')">
+  <!-- Image Block 1 -->
+  <?php $blockID = get_field('block_1'); ?>
+  <?php include get_theme_file_path("templates/partials/image-block.php"); ?>
+
+  <?php /*
+  <?php $blockID = get_field('block_1'); ?>
+  <section class="image-block" id="<?php echo $blockID['block_content']; ?>" style="background-image: url('https://placeimg.com/1000/500/nature')">
     <div class="container">    
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/icons/monitor.svg" alt="IT Managed Services" class="block-icon -monitor" />
-      <h1 class="title -imgTitle">IT Managed Services</h1>
+      <img src="<?php echo $blockID['icon'] ?>" alt="<?php echo $blockID['title'] ?>" class="block-icon -monitor" />
+      <h1 class="title -imgTitle"><?php echo $blockID['title'] ?></h1>
       <ul class="image-block-nav">
-
-      <?php $args = array( 'post_type' => 'it_managed_services', 'posts_per_page' => 999 ); $the_query = new WP_Query( $args );
-        if ( $the_query->have_posts() ) :
-          while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <li class="image-block-nav__item">
-              <a href="#<?php the_field('subsection_id'); ?>" title="" class="btn -hasChevron js-reveal-link" data-link-parent="services"><?php the_field('subsection_buttonLabel'); ?><span class="btn__chevron"></span></a>
-            </li>        
+      <?php $args = array( 'post_type' => $blockID['block_content'], 'posts_per_page' => 999 ); $the_query = new WP_Query( $args );
+        if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+          <li class="image-block-nav__item">
+            <a href="#<?php the_field('subsection_id'); ?>" title="" class="btn -hasChevron js-reveal-link" data-link-parent="<?php echo $blockID['block_content']; ?>"><?php the_field('subsection_buttonLabel'); ?><span class="btn__chevron"></span></a>
+          </li>        
       <?php endwhile; wp_reset_postdata(); endif; ?>
-
-        <!-- <li class="image-block-nav__item">
-          <a href="#deploy" title="" class="btn -hasChevron js-reveal-link" data-link-parent="services">Deploy<span class="btn__chevron"></span></a>
-        </li>
-        <li class="image-block-nav__item">
-          <a href="#secure" title="" class="btn -hasChevron js-reveal-link" data-link-parent="services">Secure<span class="btn__chevron"></span></a>
-        </li>
-        <li class="image-block-nav__item">
-          <a href="#support" title="" class="btn -hasChevron js-reveal-link" data-link-parent="services">Support<span class="btn__chevron"></span></a>
-        </li>
-        <li class="lineBreak"></li>
-        <li class="image-block-nav__item">
-          <a href="#backup" title="" class="btn -hasChevron js-reveal-link" data-link-parent="services">Backup<span class="btn__chevron"></span></a>
-        </li>
-        <li class="image-block-nav__item">
-          <a href="#review" title="" class="btn -hasChevron js-reveal-link" data-link-parent="services">Review<span class="btn__chevron"></span></a>
-        </li>
-        <li class="image-block-nav__item">
-          <a href="#enhance" title="" class="btn -hasChevron js-reveal-link">Enhance<span class="btn__chevron"></span></a>
-        </li> -->
       </ul>
     </div>
   </section>
-
-
-  <?php $args = array( 'post_type' => 'it_managed_services', 'posts_per_page' => 999 ); $the_query = new WP_Query( $args );
+  <?php $args = array( 'post_type' => $blockID['block_content'], 'posts_per_page' => 999 ); $the_query = new WP_Query( $args );
     if ( $the_query->have_posts() ) :
       while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-        <section class="reveal-block" data-reveal="<?php the_field('subsection_id'); ?>" data-parent="services">
+        <section class="reveal-block" data-reveal="<?php the_field('subsection_id'); ?>" data-parent="<?php echo $blockID['block_content']; ?>">
           <span class="reveal-block__close js-close-reveal"></span>
           <div class="container fade-in-down">      
             <?php the_field('subsection_content'); ?>
           </div>
         </section>
     <?php endwhile; wp_reset_postdata(); endif; ?>
-  <!-- End: Image Block -->
-
+  */ ?>
+  <!-- End: Image Block 1 -->
   
-
-
 
 
   <!-- Text Block -->
@@ -78,59 +57,63 @@ get_header(); ?>
   <!-- End: Text Block -->
 
 
-  <!-- Image Block -->
-  <section class="image-block" id="sectors" style="background-image: url('https://placeimg.com/1000/500/nature')">
-    <div class="container">    
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/icons/info-white.svg" alt="Managed IT Security Services" class="block-icon -info" />
-      <h1 class="title -imgTitle">Managed IT Security Services</h1>
-      <ul class="image-block-nav">
-        <li class="image-block-nav__item">
-          <a href="#antivirus" title="" class="btn -hasChevron js-reveal-link" data-link-parent="security">Antivirus<span class="btn__chevron"></span></a>
-        </li>
-        <li class="image-block-nav__item">
-          <a href="#firewall" title="" class="btn -hasChevron js-reveal-link" data-link-parent="security">Firewall<span class="btn__chevron"></span></a>
-        </li>
-        <li class="image-block-nav__item">
-          <a href="#backup" title="" class="btn -hasChevron js-reveal-link" data-link-parent="security">Backup<span class="btn__chevron"></span></a>
-        </li>
-        <li class="image-block-nav__item">
-          <a href="#email-filtering" title="" class="btn -hasChevron js-reveal-link" data-link-parent="security">Email Filtering<span class="btn__chevron"></span></a>
-        </li>
-        <li class="image-block-nav__item">
-          <a href="#patch-management" title="" class="btn -hasChevron js-reveal-link" data-link-parent="security">Patch Management<span class="btn__chevron"></span></a>
-        </li>
-      </ul>
-    </div>
-  </section>
   
-  <section class="reveal-block" data-reveal="antivirus" data-parent="security">
-    <span class="reveal-block__close js-close-reveal"></span>
-    <div class="container fade-in-down">      
-      <h1 class="title">Deploy</h1>
-      <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
-      <p>However, the GDPR provides more specifics about what you have to do about the security of your processing and how you should assess your information risk and put appropriate security measures in place. Whilst these are broadly equivalent to what was considered good and best practice under the 1998 Act, they are now a legal requirement.</p>
-    </div>
-  </section>
+  
+  <!-- Image Block 2 -->
+  <?php $blockID = get_field('block_2'); ?>
+  <?php include get_theme_file_path("templates/partials/image-block.php"); ?>
 
-  <section class="reveal-block" data-reveal="firewall" data-parent="security">
-    <span class="reveal-block__close js-close-reveal"></span>
-    <div class="container fade-in-down">
-      <h1 class="title">Secure</h1>
-      <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
-      <p>However, the GDPR provides more specifics about what you have to do about the security of your processing and how you should assess your information risk and put appropriate security measures in place. Whilst these are broadly equivalent to what was considered good and best practice under the 1998 Act, they are now a legal requirement.</p>
-    </div>
-  </section>
-
-  <section class="reveal-block" data-reveal="Backup" data-parent="security">
-    <span class="reveal-block__close js-close-reveal"></span>
-    <div class="container fade-in-down">      
-      <h1 class="title">Support</h1>
-      <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
-      <p>However, the GDPR provides more specifics about what you have to do about the security of your processing and how you should assess your information risk and put appropriate security measures in place. Whilst these are broadly equivalent to what was considered good and best practice under the 1998 Act, they are now a legal requirement.</p>
-    </div>
-  </section>
-
-  <!-- End: Image Block -->
+  <?php /*    
+    <section class="image-block" id="sectors" style="background-image: url('https://placeimg.com/1000/500/nature')">
+      <div class="container">    
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/icons/info-white.svg" alt="Managed IT Security Services" class="block-icon -info" />
+        <h1 class="title -imgTitle">Managed IT Security Services</h1>
+        <ul class="image-block-nav">
+          <li class="image-block-nav__item">
+            <a href="#antivirus" title="" class="btn -hasChevron js-reveal-link" data-link-parent="security">Antivirus<span class="btn__chevron"></span></a>
+          </li>
+          <li class="image-block-nav__item">
+            <a href="#firewall" title="" class="btn -hasChevron js-reveal-link" data-link-parent="security">Firewall<span class="btn__chevron"></span></a>
+          </li>
+          <li class="image-block-nav__item">
+            <a href="#backup" title="" class="btn -hasChevron js-reveal-link" data-link-parent="security">Backup<span class="btn__chevron"></span></a>
+          </li>
+          <li class="image-block-nav__item">
+            <a href="#email-filtering" title="" class="btn -hasChevron js-reveal-link" data-link-parent="security">Email Filtering<span class="btn__chevron"></span></a>
+          </li>
+          <li class="image-block-nav__item">
+            <a href="#patch-management" title="" class="btn -hasChevron js-reveal-link" data-link-parent="security">Patch Management<span class="btn__chevron"></span></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="reveal-block" data-reveal="antivirus" data-parent="security">
+      <span class="reveal-block__close js-close-reveal"></span>
+      <div class="container fade-in-down">      
+        <h1 class="title">Deploy</h1>
+        <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
+        <p>However, the GDPR provides more specifics about what you have to do about the security of your processing and how you should assess your information risk and put appropriate security measures in place. Whilst these are broadly equivalent to what was considered good and best practice under the 1998 Act, they are now a legal requirement.</p>
+      </div>
+    </section>
+    <section class="reveal-block" data-reveal="firewall" data-parent="security">
+      <span class="reveal-block__close js-close-reveal"></span>
+      <div class="container fade-in-down">
+        <h1 class="title">Secure</h1>
+        <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
+        <p>However, the GDPR provides more specifics about what you have to do about the security of your processing and how you should assess your information risk and put appropriate security measures in place. Whilst these are broadly equivalent to what was considered good and best practice under the 1998 Act, they are now a legal requirement.</p>
+      </div>
+    </section>
+    <section class="reveal-block" data-reveal="Backup" data-parent="security">
+      <span class="reveal-block__close js-close-reveal"></span>
+      <div class="container fade-in-down">      
+        <h1 class="title">Support</h1>
+        <p>The GDPR requires you to process personal data securely. This is not a new data protection obligation. It replaces and mirrors the previous requirement to have ‘appropriate technical and organisational measures’ under the Data Protection Act 1998 (the 1998 Act).</p>
+        <p>However, the GDPR provides more specifics about what you have to do about the security of your processing and how you should assess your information risk and put appropriate security measures in place. Whilst these are broadly equivalent to what was considered good and best practice under the 1998 Act, they are now a legal requirement.</p>
+      </div>
+    </section>
+  */ ?>
+  <!-- End: Image Block 2 -->
 
 
 
