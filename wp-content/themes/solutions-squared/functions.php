@@ -280,3 +280,6 @@ function filter_ptags_on_images($content)
 
 // we want it to be run after the autop stuff... 10 is default.
 add_filter('the_content', 'filter_ptags_on_images');
+
+// Remove P tags from CF7
+add_filter('wpcf7_autop_or_not', '__return_false');

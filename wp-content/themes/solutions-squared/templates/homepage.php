@@ -58,6 +58,9 @@ get_header(); ?>
       <a href="#contact" title="Work with us" class="btn -centre js-reveal-link" data-link-parent="contact">Work with us</a>
 
 
+      
+      <?php echo do_shortcode('[contact-form-7 id="185" title="Contact form"]'); ?>
+
       <?php echo do_shortcode('[wpgmza id="1"]'); ?>
 
     </div>
