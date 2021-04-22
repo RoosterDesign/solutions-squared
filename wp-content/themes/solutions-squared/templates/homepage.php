@@ -58,10 +58,27 @@ get_header(); ?>
       <a href="#contact" title="Work with us" class="btn -centre js-reveal-link" data-link-parent="contact">Work with us</a>
 
 
-      
       <?php echo do_shortcode('[contact-form-7 id="185" title="Contact form"]'); ?>
 
-      <?php echo do_shortcode('[wpgmza id="1"]'); ?>
+
+      <div class="map-address-wrap">
+
+        <div class="map">
+          <?php echo do_shortcode('[wpgmza id="1"]'); ?>
+        </div>
+
+        <div class="address">
+          <h3 class="address__title">Address:</h3>
+          <p>3 The Stables<br> 50 Castle Hill<br> Kenilworth<br> Warwickshire<br> CV8 1NB</p>
+          <h3 class="address__title">Telephone:</h3>
+          <p>01926 850084</p>
+          <h3 class="address__title">Fax:</h3>
+          <p>01926 853400</p>
+          <h3 class="address__title">Email:</h3>
+          <p><a href="mailto:info@solutions-squared.com" title="Email Solutions Squared">info@solutions-squared.com</a></p>
+        </div>  
+
+      </div>    
 
     </div>
   </section>

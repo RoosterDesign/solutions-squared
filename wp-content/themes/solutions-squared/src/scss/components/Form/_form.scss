@@ -1,8 +1,9 @@
 .wpcf7-form {
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
+  margin-bottom: 30px;
   @include mq(tablet-lg) {
-    margin: 0 -5px;
+    margin: 0 -5px 60px;
   }
 }
 
