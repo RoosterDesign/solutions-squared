@@ -27,7 +27,7 @@ $breakpoints: (mobile-lg: 375px,
 
 @mixin pStyles {
     font-size: $fontSize--sm;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     @include mq(tablet) {
         font-size: $fontSize--md;
         margin-bottom: 30px;

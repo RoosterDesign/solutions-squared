@@ -1,41 +1,49 @@
 <?php get_header(); ?>
 
-	<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+<div class="container blog-list">
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+	<div class="blog-list-main">
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<article class="blog-list-article">
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				<header class="blog-list-article__header mh">
+					<h1 class="blog-list-article__title"><?php the_title(); ?></h1>
+					<div class="post-meta">					
+						<?php echo get_the_date('jS F Y'); ?>&nbsp;/&nbsp;					
+						<?php echo get_the_category_list(', '); ?>		
+						<?php $my_tags = get_the_tags();
+						if ( $my_tags ) { ?>
+							&nbsp;/&nbsp;
+							<?php foreach ( $my_tags as $tag ) {
+									$tag_names[] = '<a href="'.get_tag_link( $tag->term_id ).'" rel="tag" title="'.$tag->name.'">'.$tag->name.'</a>';
+							}
+								echo implode( ', ', $tag_names );
+						} ?>					
+					</div>
+				</header>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><img src="https://placeimg.com/423/270/nature" class="news-item__img" alt="<?php the_title(); ?>"/></a>
+				<p><?php echo get_excerpt(200); ?></p>
+				<a href="<?php the_permalink(); ?>" alt="Read more" class="news-item__link">Read more></a>
+			</article>
+		<? endwhile; ?>
 
-			endwhile;
+		<div class="pagination">		
+			<div class="pagination__link"><?php next_posts_link( '< Older posts' ); ?></div>	
+			<div class="pagination__link"><?php previous_posts_link( 'Newer posts >' ); ?></div>			
+		</div>
 
-			the_posts_navigation();
+		<?php else : ?>
+			<p>No articles available.</p>
+		<?php endif; ?>	
+		
+	</div>
 
-		else :
+	<aside class="blog-list-sidebar">
+		<?php get_sidebar(); ?>
+	</aside>
 
-			get_template_part( 'template-parts/content', 'none' );
+</div>
 
-		endif;
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

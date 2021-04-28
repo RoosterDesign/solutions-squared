@@ -13,7 +13,7 @@
 	<header class="site-header">
 		<div class="container">
 
-			<a href="" alt="Solutions Squared" class="site-header__logo">
+			<a href="/" alt="Solutions Squared" class="site-header__logo">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo.svg" />				
 			</a>
 

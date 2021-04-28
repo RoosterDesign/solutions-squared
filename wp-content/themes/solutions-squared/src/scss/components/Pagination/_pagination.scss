@@ -1,0 +1,28 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;  
+  padding: 0 5px;
+  width: 100%;
+
+  &__link {
+    @include pStyles;
+    
+
+    a {
+      color: $linkColour;
+      display: inline-block;
+      font-weight: $fwSemiBold;
+      margin: 0 0 40px;
+      text-decoration: none;
+      @include mq(tablet-lg) {
+        margin: 50px 0 0;
+      }
+    }
+
+    a:hover {
+      color: $linkHoverColour;
+    }
+
+  }
+
+}

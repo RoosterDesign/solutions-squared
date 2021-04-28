@@ -8,9 +8,11 @@
     margin-top: 40px;
   }
 
-  .map-address-wrap {
+}
+
+.map-address-wrap {
+  @include mq(tablet) {
     align-items: center;
     display: flex;
   }
-
 }

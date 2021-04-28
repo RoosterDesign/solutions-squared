@@ -3,6 +3,7 @@ $white: #fff;
 $black: #000;
 $darkGrey: #3c3636;
 $brandOrange: #f38025;
+$borerColour: #cbcbcb;
 
 // Container
 $containerPaddingMobile: 20px;
@@ -35,7 +36,7 @@ $linkHoverColour: $black;
 // Header
 $mobileHeaderHeight: 65px;
 $desktopHeaderHeight: 85px;
-$headerBorderColour: #cbcbcb;
+$headerBorderColour: $borerColour;
 $headerBorderWidth: 1px;
 $hamburgerColour: $brandOrange;
 $headerLinkColour: $bodyColour;
@@ -57,7 +58,10 @@ $sliderDotActiveBorderColour: $brandOrange;
 $sliderDotActiveBgColour: $brandOrange;
 
 // Reveal blocks
-$revealBgColour: $darkGrey;
+// $revealBgColour: $darkGrey;
+// $revealColour: $white;
+$revealBgColour: #f1f1f1;
+$revealColour: $bodyColour;
 
 
 // Twitter Feed

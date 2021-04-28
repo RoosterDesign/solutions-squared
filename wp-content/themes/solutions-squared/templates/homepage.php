@@ -50,48 +50,20 @@ get_header(); ?>
   <!-- End: News -->
 
 
-  <!-- TODO -->
   <!-- Contact -->
   <section class="contact-block" id="contact">
     <div class="container">
       <h1 class="title">Have a project in mind?</h1>
       <a href="#contact" title="Work with us" class="btn -centre js-reveal-link" data-link-parent="contact">Work with us</a>
-
-
-      <?php echo do_shortcode('[contact-form-7 id="185" title="Contact form"]'); ?>
-
-
-      <div class="map-address-wrap">
-
-        <div class="map">
-          <?php echo do_shortcode('[wpgmza id="1"]'); ?>
-        </div>
-
-        <div class="address">
-          <h3 class="address__title">Address:</h3>
-          <p>3 The Stables<br> 50 Castle Hill<br> Kenilworth<br> Warwickshire<br> CV8 1NB</p>
-          <h3 class="address__title">Telephone:</h3>
-          <p>01926 850084</p>
-          <h3 class="address__title">Fax:</h3>
-          <p>01926 853400</p>
-          <h3 class="address__title">Email:</h3>
-          <p><a href="mailto:info@solutions-squared.com" title="Email Solutions Squared">info@solutions-squared.com</a></p>
-        </div>  
-
-      </div>    
-
     </div>
   </section>
 
   <section class="reveal-block" data-reveal="contact" data-parent="contact">
     <span class="reveal-block__close js-close-reveal"></span>
     <div class="container fade-in-down">
-      contact form...
-      <br />
-      google map...
-      
-      <br />
-      contact details...
+      <h1>Get in touch</h1>
+      <?php echo do_shortcode('[contact-form-7 id="185" title="Contact form"]'); ?>
+      <?php include get_theme_file_path("templates/partials/map-address.php"); ?>      
     </div>
   </section>
     

@@ -1,5 +1,5 @@
 function showReveal() {
-  const slideDuration = 400;
+  const slideDuration = 600;
   const scrollDuration = 1000;
 
   // Get the current header height for the scroll offset
@@ -37,7 +37,6 @@ function showReveal() {
     } else {
       openSepcificBlock(revealBlock)
     };
-    console.info('scroll to reveal ', parentBlockId);
     scrollToReveal(parentBlockId);
   };
 

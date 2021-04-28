@@ -1,10 +1,10 @@
 .reveal-block {
   background: $revealBgColour;
-  color: #fff;
+  color: $revealColour;
   display: none;
   margin: 0 auto;
   max-width: 1920px;
-  padding: 50px 0;
+  padding:  60px 0;
   position: relative;
   @include mq(tablet) {
     padding: 80px 0;
@@ -16,6 +16,7 @@
   h1 {
     @extend .title;
     margin-bottom: 40px;
+    text-align: left;
   }
 
   h2, h3, h4, h5, h6 {
@@ -84,10 +85,14 @@
       top: 40px;
       width: 40px;
     }
+    @include mq(tablet-lg) {
+    }
+    @include mq(desktop) {
+    }
 
     &:before,
     &:after {
-      background: $white;
+      background: $revealColour;
       content: '';
       display: block;
       height: 3px;

@@ -1,0 +1,191 @@
+.single-post {
+
+  .post {
+    padding: 30px 0;
+    @include mq(tablet) {
+      padding: 50px 0;
+    } 
+
+    .postDate {
+      @include pStyles;
+      margin: -10px 0 40px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: $fwBold;
+    }
+
+    h1 {
+      font-size: 3rem;  
+      margin-bottom: 20px;
+      @include mq(tablet) {
+        font-size: 4.4rem;
+        margin-bottom: 30px;
+      }
+      @include mq(tablet-lg) {
+        font-size: 5rem;
+      }
+      @include mq(desktop) {
+        font-size: 6rem;
+      }
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+      @include mq(tablet) {
+        font-size: 3rem;
+      }
+      @include mq(tablet-lg) {
+        font-size: 4rem;
+      }
+      @include mq(desktop) {
+        font-size: 4.8rem;
+        margin-top: 30px;
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      @include mq(tablet) {
+        font-size: 2.6rem;
+      }
+      @include mq(tablet-lg) {
+        font-size: 3rem;
+      }
+      @include mq(desktop) {
+        font-size: 4.4rem;
+        margin-top: 30px;
+      }
+    }
+
+    h4 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      @include mq(tablet) {
+        font-size: 2.6rem;
+      }
+      @include mq(tablet-lg) {
+        font-size: 3rem;
+      }
+      @include mq(desktop) {
+        font-size: 4rem;
+        margin-top: 30px;
+      }
+    }
+
+    h5 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      @include mq(tablet) {
+        font-size: 2.6rem;
+      }
+      @include mq(tablet-lg) {
+        font-size: 3rem;
+      }
+      @include mq(desktop) {
+        font-size: 3.6rem;
+        margin-top: 30px;
+      }
+    }
+
+    h6 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      @include mq(tablet) {
+        font-size: 2.6rem;
+      }
+      @include mq(tablet-lg) {
+        font-size: 3rem;
+      }
+      @include mq(desktop) {
+        margin-top: 30px;
+      }
+    }
+
+    p, li {
+      @include pStyles;
+    }
+
+    p a, li a {
+      color: $linkColour;
+      text-decoration: none;
+    }
+
+    p a:hover, li a:hover {
+      color: $linkHoverColour;
+    }
+
+    ul {
+      margin-bottom: 20px;    
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    blockquote {
+      border-left: 3px solid $brandOrange;
+      margin: 30px 0;
+      padding-left: 20px;
+      @include mq(tablet) {
+        margin: 40px 0 40px 40px;
+        padding-left: 30px;
+      }
+    }
+
+    hr {
+      border: none;
+      border-bottom: 1px solid $bodyColour;
+      clear: both;
+      height: 0;
+      margin: 30px 0;  
+      @include mq(tablet-lg) {
+        margin: 0 0 40px;
+        padding: 40px 0 0;
+      }
+    }
+
+    img {
+
+      &.alignleft,
+      &.aligncenter,
+      &.alignright,
+      &.alignnone {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        @media only screen and (max-width: 991px) {
+          margin: 30px auto;
+        }
+      }
+      
+      &.alignleft {
+        @include mq(tablet-lg) {
+          float: left;
+          margin-right: 30px;
+          max-width: 40%;
+        }
+      }
+
+      &.aligncenter,
+      &.alignnone {
+        @include mq(tablet-lg) {
+          margin: 40px auto;
+        }
+      }
+
+      &.alignright {
+        @include mq(tablet-lg) {
+          float: right;
+          margin-left: 30px;
+          max-width: 40%;
+        }
+      }
+      
+    }
+
+  }
+
+}
