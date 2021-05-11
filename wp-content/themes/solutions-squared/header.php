@@ -6,59 +6,24 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-
 	<header class="site-header">
 		<div class="container">
-
 			<a href="/" alt="Solutions Squared" class="site-header__logo">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo.svg" />				
 			</a>
-
-			<a href="#" alt="" class="site-header__remote-link">Windows Remote Support</a>
-			<a href="#" alt="" class="site-header__remote-link">Mac Remote Support</a>
-
+			<?php wp_nav_menu( array( 'menu' => 'remote-links', 'container_class' => 'remote-links -desktop' )); ?>
 			<button class="hamburger" type="button">
 				<span class="hamburger-box">
 					<span class="hamburger-inner"></span>
 				</span>
 			</button> 
 		</div>
-
-
 		<nav class="navigation" role="navigation">
 			<div class="container">
-				<ul class="navigation-list">
-					<li class="navigation-list__item">
-						<a href="#services" title="Services" class="navigation-list__link">Services</a>
-					</li>
-					<li class="navigation-list__item">
-						<a href="#sectors" title="Sectors" class="navigation-list__link">Sectors</a>
-					</li>
-					<li class="navigation-list__item">
-						<a href="#learning" title="Learning" class="navigation-list__link">Learning</a>
-					</li>
-					<li class="navigation-list__item">
-						<a href="#about" title="About" class="navigation-list__link">About</a>
-					</li>
-					<li class="navigation-list__item">
-						<a href="#news" title="News" class="navigation-list__link">News</a>
-					</li>
-					<li class="navigation-list__item">
-						<a href="#contact" title="Contact" class="navigation-list__link">Contact</a>
-					</li>
-				</ul>
-
-				<ul class="navigation-list -remoteLinks">
-					<li class="navigation-list__item">
-						<a href="#contact" title="Contact" class="navigation-list__link -small">Windows Remote Support</a>
-					</li>
-					<li class="navigation-list__item">
-						<a href="#contact" title="Contact" class="navigation-list__link -small">Mac Remote Support</a>
-					</li>
-				</ul>
+				<?php wp_nav_menu( array( 'menu' => 'main-menu', 'container' => 'ul', )); ?>
+				<?php wp_nav_menu( array( 'menu' => 'remote-links', 'container_class' => 'remote-links -mobile' )); ?>
 			</div>
 		</nav>
 	</header>

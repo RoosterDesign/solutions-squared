@@ -62,7 +62,7 @@ get_header(); ?>
     <span class="reveal-block__close js-close-reveal"></span>
     <div class="container fade-in-down">
       <h1>Get in touch</h1>
-      <?php echo do_shortcode('[contact-form-7 id="185" title="Contact form"]'); ?>
+      <?php echo do_shortcode('[contact-form-7 id="198" title="Contact form"]'); ?>
       <?php include get_theme_file_path("templates/partials/map-address.php"); ?>      
     </div>
   </section>

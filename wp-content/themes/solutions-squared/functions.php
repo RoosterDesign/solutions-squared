@@ -44,8 +44,16 @@ if ( ! function_exists( 'wp_vanilla_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'solutions-squared' ),
+				'menu-2' => esc_html__( 'Remote Links', 'solutions-squared' ),
 			)
 		);
+
+
+		// function wpb_custom_new_menu() {
+		// 	register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
+		// }
+		// add_action( 'init', 'wpb_custom_new_menu' );
+
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

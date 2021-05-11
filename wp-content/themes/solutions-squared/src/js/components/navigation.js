@@ -7,16 +7,25 @@ hamburgerIcon.addEventListener('click', function () {
 });
 
 // Scroll to section
-var navLinks = document.querySelectorAll('.navigation-list__link');
-for (let i = 0; i < navLinks.length; i++) {
-	const link = navLinks[i];
-	link.addEventListener('click', function(e) {
-		e.preventDefault();
-		const linkTarget = jQuery(e.target.hash);
-		document.body.classList.remove('nav-open');
-		hamburgerIcon.classList.remove('-isActive');
-		jQuery('html,body').animate({
-			scrollTop:  jQuery(linkTarget).offset().top
-		}, 2000);
-	});	
-};
+function menuScrollToSection() {
+	var navLinks = document.querySelectorAll('#menu-main-menu a');
+	for (let i = 0; i < navLinks.length; i++) {
+		const link = navLinks[i];
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+			const linkTarget = jQuery(e.target.hash);
+			document.body.classList.remove('nav-open');
+			hamburgerIcon.classList.remove('-isActive');
+			var offsetOverride = linkTarget[0].id === 'news' ? 120 : 0;
+			jQuery('html,body').animate({
+				scrollTop: jQuery(linkTarget).offset().top - offsetOverride
+			}, 2000);
+		});	
+	};
+}
+
+// Scroll menu depending on page
+let bodyClass = document.querySelector('body').classList.value;
+if(bodyClass.indexOf('home') !== -1) {
+	menuScrollToSection();
+}
