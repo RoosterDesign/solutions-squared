@@ -213,7 +213,7 @@ function get_excerpt($limit){
 		set_post_thumbnail_size( 360, 240, true ); // default Featured Image dimensions (cropped)
 
 		// additional image sizes
-		add_image_size( 'post-img', 650, 9999 );
+		add_image_size( 'post-img', 1280, 9999 );
 		add_image_size( 'featured-post-thumb', 785, 530 );
 		add_image_size( 'home-carousel', 1200, 500, true );
 		add_image_size( 'home-intro', 650, 9999 );

@@ -23,7 +23,13 @@
 					</div>
 				</header>
 
-				<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><img src="https://placeimg.com/423/270/nature" class="news-item__img" alt="<?php the_title(); ?>"/></a>
+				<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+					<?php if ( has_post_thumbnail() ) { ?>
+						<?php the_post_thumbnail('thumbnail', array('class' => 'news-item__img')); ?>
+					<?php } else { ?>
+						<img src="/wp-content/uploads/2021/07/no-blog-image.jpg" alt="<?php the_title(); ?>" class="news-item__img" />
+					<?php } ?>
+				</a>
 				<p><?php echo get_excerpt(200); ?></p>
 				<a href="<?php the_permalink(); ?>" alt="Read more" class="news-item__link">Read more></a>
 			</article>
