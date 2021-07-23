@@ -238,12 +238,19 @@ function awesome_page_create() {
 
 		function sitewide_settings_display() {
 			
-			/* Site Logo */
+			/* Site Logo 
 			if (isset($_POST['site_logo'])) {
 				$site_logo = $_POST['site_logo'];
 				update_option('site_logo', $site_logo);
 			}
-			$site_logo = get_option('site_logo', '');				
+			$site_logo = get_option('site_logo', '');		*/
+			
+			/* Fallback Image */
+			if (isset($_POST['fallback_img'])) {
+				$fallback_img = $_POST['fallback_img'];
+				update_option('fallback_img', $fallback_img);
+			}
+			$fallback_img = get_option('fallback_img', '');
 		?>
 
 		<style>.settingsGroup{align-items:center;display:flex;margin-bottom:30px}.settingsGroup label{margin:0;width:150px}.settingsGroup input,.settingsGroup textarea{width:400px}.settingsGroup textarea{height:100px}</style>
@@ -251,17 +258,24 @@ function awesome_page_create() {
 		<br>
 		<form method="POST">
 
-			<h2>Branding</h2>
+			<!-- <h2>Branding</h2>
 			<p>Upload to media library first and add link below.</p>
 			<div class="settingsGroup">
 				<label for="site_logo">Logo</label><br>
 				<input type="text" name="site_logo" id="site_logo" value="<?php echo $site_logo; ?>">
 			</div>	
 
+			<hr /> -->
+
+			<h2>Fallbak Images</h2>
+			<div class="settingsGroup">
+				<label for="fallback_img">News</label><br>
+				<input type="text" name="fallback_img" id="fallback_img" value="<?php echo $fallback_img; ?>">
+			</div>
+
 			<hr />
 
-
-				<input type="submit" value="Save" class="button button-primary button-large">
+			<input type="submit" value="Save" class="button button-primary button-large">
 		</form>
 
 	<?php }

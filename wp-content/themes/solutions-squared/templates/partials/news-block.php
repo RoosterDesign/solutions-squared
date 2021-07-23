@@ -16,7 +16,7 @@
                 <?php if ( has_post_thumbnail() ) { ?>
                   <?php the_post_thumbnail('thumbnail', array('class' => 'news-item__img')); ?>
                 <?php } else { ?>
-                  <img src="/wp-content/uploads/2021/07/no-blog-image.jpg" alt="<?php the_title(); ?>" class="news-item__img" />
+                  <img src="<?php echo get_option('fallback_img'); ?>" alt="<?php the_title(); ?>" class="news-item__img" />
                 <?php } ?>
               </a>                  
               <h1 class="news-item__title"><?php the_title(); ?></h1>
