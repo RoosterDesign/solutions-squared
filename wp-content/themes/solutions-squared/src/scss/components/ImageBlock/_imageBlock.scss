@@ -19,6 +19,17 @@
     padding: 100px 0;
   }
 
+  &.-hasMargin {
+    margin-bottom: 50px;    
+    @include mq(tablet) {
+      margin-bottom: 150px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 250px;
+    }
+
+  }
+
   &.-hasMask:after {
     background: rgba(48,48,48,.7);
     content: '';

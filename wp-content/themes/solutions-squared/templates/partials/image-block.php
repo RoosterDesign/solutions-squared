@@ -1,4 +1,4 @@
-<section class="image-block<?php if( $blockID['image_mask']) : ?> -hasMask<?php endif; ?>" id="<?php echo $blockID['content']; ?>" style="background-image: url('<?php echo $blockID['bg_image']; ?>')"> 
+<section class="image-block<?php if( $blockID['image_mask']) : ?> -hasMask<?php endif; ?><?php if( $blockID['has_margin']) : ?> -hasMargin<?php endif; ?>" id="<?php echo $blockID['content']; ?>" style="background-image: url('<?php echo $blockID['bg_image']; ?>')">
 
     <div class="container">
 
