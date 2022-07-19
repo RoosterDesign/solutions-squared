@@ -4,7 +4,7 @@
      <?php if ($newsBlock['title']) : ?>
         <h1 class="title"><?php echo $newsBlock['title']; ?></h1>
       <?php endif; ?>
-      <a href="/news" title="News" class="btn -centre" data-link-parent="contact">See all news</a>
+      <a href="/learn-stuff" title="See all" class="btn -centre" data-link-parent="contact">See all</a>
 
       <div class="news-items-wrap">
         <?php
@@ -20,7 +20,8 @@
                 <?php } ?>
               </a>                  
               <h1 class="news-item__title"><?php the_title(); ?></h1>
-              <p><?php echo get_excerpt(200); ?></p>
+              <p><?php echo get_content(200); ?></p>  
+              <?/*<p><?php echo mb_strimwidth(get_the_content(), 0, 200, '...'); ?></p>*/?>
               <a href="<?php the_permalink(); ?>" alt="Read more" class="news-item__link">Read more></a>
             </article>
         <?php } } ?>

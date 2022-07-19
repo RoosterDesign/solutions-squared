@@ -4,40 +4,51 @@ Template Name: Homepage
 */
 get_header(); ?>
 
-  <!-- Image Block 1 -->
+  <!-- IT Managed Services (block_1) -->
   <?php $blockID = get_field('block_1'); ?>
   <?php include get_theme_file_path("templates/partials/image-block.php"); ?>
-  <!-- End: Image Block 1 -->
+  <!-- End: IT Managed Services (block_1) -->
 
-  <!-- Text Block -->  
+  <!-- Text Block 1 - Security -->  
   <?php $textBlockID = get_field('text_block_1'); ?>
   <?php include get_theme_file_path("templates/partials/text-block.php"); ?>
-  <!-- End: Text Block --> 
+  <!-- End: Text Block 1 - Security --> 
   
-  <!-- Image Block 2 -->
+  <!-- Managed IT Security Services (block_2) -->
   <?php $blockID = get_field('block_2'); ?>
   <?php include get_theme_file_path("templates/partials/image-block.php"); ?>
-  <!-- End: Image Block 2 -->
+  <!-- End: Managed IT Security Services (block_2) -->
+
+  <!-- Offers (block_7) -->
+  <?php $blockID = get_field('block_7'); ?>
+  <?php include get_theme_file_path("templates/partials/image-block.php"); ?>
+  <!-- End: Offers (block_7) -->
 
   <!-- Text Block 2 -->  
   <?php $textBlockID = get_field('text_block_2'); ?>
   <?php include get_theme_file_path("templates/partials/text-block.php"); ?>
   <!-- End: Text Block 2 -->
   
-  <!-- Image Block 3 -->
+  <!-- Put the web to work (block_3) -->
   <?php $blockID = get_field('block_3'); ?>
   <?php include get_theme_file_path("templates/partials/image-block.php"); ?>
-  <!-- End: Image Block 3 -->
+  <!-- End: Put the web to work (block_3) -->
 
-  <!-- Image Block 4 -->
+  <!-- Cloud Services (block_4) -->
   <?php $blockID = get_field('block_4'); ?>
   <?php include get_theme_file_path("templates/partials/image-block.php"); ?>
-  <!-- End: Image Block 4 -->
+  <!-- End: Cloud Services (block_4) -->
 
-  <!-- Image Block 5 -->
+  <!-- Partner Services (block_5) -->
   <?php $blockID = get_field('block_5'); ?>
   <?php include get_theme_file_path("templates/partials/image-block.php"); ?>
-  <!-- End: Image Block 5 -->
+  <!-- End: Partner Services (block_5) -->
+
+
+  <!-- Sectors (block_6) -->
+  <?php $blockID = get_field('block_6'); ?>
+  <?php include get_theme_file_path("templates/partials/image-block.php"); ?>
+  <!-- End: Sectors (block_6) -->
 
   <!-- Testimonials -->
   <?php $testimonialsBlock = get_field('testimonials_block'); ?>
