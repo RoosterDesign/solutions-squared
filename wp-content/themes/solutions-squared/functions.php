@@ -324,3 +324,7 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 
 
 // AIzaSyCm3DQ6OjTssKzTWz7uIBS0CT_zEWCpHsA
+
+
+// Re-add Custom Fields that ACF overrides for Code Embed plugin use
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');

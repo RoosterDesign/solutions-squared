@@ -31,7 +31,7 @@
       while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <section class="reveal-block" data-reveal="<?php echo $blockID['content']; ?>_<?php the_field('subsection_id'); ?>" data-parent="<?php echo $blockID['content']; ?>">
           <span class="reveal-block__close js-close-reveal"></span>
-          <div class="container fade-in-down">      
+          <div class="container fade-in-down">
             <?php the_field('subsection_content'); ?>
           </div>
         </section>
