@@ -1,0 +1,21 @@
+.title {
+  font-size: 3rem;
+  font-weight: $fwSemiBold;    
+  margin-bottom: 20px;
+  text-align: center;
+  @include mq(tablet) {
+    font-size: 4.4rem;
+    margin-bottom: 30px;
+  }
+  @include mq(tablet-lg) {
+    font-size: 5rem;
+  }
+  @include mq(desktop) {
+    font-size: 6rem;
+  }
+
+  &.-imgTitle {
+    font-weight: $fwBold;
+  }
+
+}

@@ -1,0 +1,93 @@
+.navigation {
+  background: rgba(243, 128, 37, .95);  
+  position: fixed;
+  height: 100%;
+  left: 100%;
+  top: 0;
+  transition: left .4s ease-in-out;
+  width: 100%;
+  z-index: 98;
+
+  > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+}
+
+body.nav-open .navigation {
+  left: 0;
+}
+
+.navigation .menu {
+  list-style: none;
+  margin: 80px 0 0;
+  padding: 0 10px 0 0;
+  @include mq(tablet) {
+    margin-top: 100px;
+    padding-right: 30px;
+  }
+  @include mq(tablet-lg) {
+    padding-right: 60px;
+  }
+  @include mq(desktop) {
+    padding-right: 0;
+  }
+
+  // &:hover .navigation-list__link {
+  //   @include mq(desktop) {
+  //     opacity: .5;
+  //     transition: all .15s ease-in-out;
+  //   }
+  // }
+
+  .menu-item {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu-item a {
+    color: $navLinkColour;
+    display: inline-block;
+    font-size: 3.8rem;
+    font-weight: $fwBold;
+    line-height: 1;
+    padding: 10px 0;
+    text-decoration: none;
+    text-align: right;
+    transition: all .15s ease-in-out;
+    @include mq(mobile-lg) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    @include mq(tablet) {
+      font-size: 6rem;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    @include mq(tablet-lg) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    @include mq(desktop) {
+      font-size: 8rem;
+      padding: 20px 8px;
+    }
+    @include laptop-mq {
+      font-size: 6rem;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+  }
+
+  .menu-item a:hover {
+    @include mq(desktop) {
+      padding-left: 16px;
+      padding-right: 0;
+      opacity: 1 !important;
+    }
+  }
+  
+}

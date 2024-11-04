@@ -1,0 +1,101 @@
+.wpcf7-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  @include mq(tablet-lg) {
+    margin: 0 -5px 60px;
+  }
+}
+
+.wpcf7-form-control-wrap {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  @include mq(tablet-lg) {
+    flex-basis: 50%;
+    padding: 0 5px;
+  }
+
+  &.your-comments {
+    flex-basis: 100%;
+  }
+
+}
+
+.wpcf7-form-control {
+  border: 1px solid #b7b7b7;
+  border-radius: 0;
+  color: $bodyColour;
+  height: 50px;
+  flex-basis: 100%;
+  font-size: $fontSize--sm;
+  font-weight: $fwLight;
+  outline: none;
+  padding: 0 20px;
+  width: 100%;
+  @include mq(tablet-lg) {
+    font-size: $fontSize--lg;
+    height: 70px;
+    padding: 0 30px;
+  }
+}
+
+.wpcf7-textarea {
+  height: 150px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include mq(tablet-lg) {
+    height: 225px;
+  }
+}
+
+.wpcf7-submit {
+  border: none;
+  color: $buttonColour;
+  cursor: pointer;
+  display: inline-block;
+  flex-basis: auto;
+  height: 52px;  
+  margin-top: 10px;
+  width: 175px;
+  @include mq(tablet-lg) {
+    margin-left: 5px;
+  }
+}
+
+
+// Ajax spinner
+
+.wpcf7 .ajax-loader {
+  margin-top: 55px;
+}
+
+// Validation
+
+.wpcf7-form-control.wpcf7-not-valid {
+  border-color: #dc3232;
+}
+
+.wpcf7-not-valid-tip {
+  font-size: 2rem;
+  margin: 10px 0 15px;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  margin: 30px 0 0;
+  padding: 20px 30px;
+  width: 100%;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  background: #46b450;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {  
+  background: #dc3232;
+}

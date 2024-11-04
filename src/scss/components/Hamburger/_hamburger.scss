@@ -1,0 +1,106 @@
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 5px;
+  text-transform: none;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  @include mq(tablet) {
+    padding: 15px;
+  }
+}
+
+.hamburger.-isActive {
+  z-index: 99;
+}
+
+.hamburger.-isActive .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger.-isActive .hamburger-inner,
+.hamburger.-isActive .hamburger-inner::before,
+.hamburger.-isActive .hamburger-inner::after {
+  background-color: $white;
+}
+
+.hamburger.-isActive .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+.hamburger.-isActive .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger-box {
+  height: 24px;
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  @include mq(tablet) {
+    width: 40px;
+  }
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: $hamburgerColour;
+  height: 3px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+  width: 30px;
+  @include mq(tablet) {
+    height: 6px;
+    width: 40px;
+  }
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -8px;
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  @include mq(tablet) {
+    top: -14px;
+  }
+}
+
+.hamburger-inner::after {
+  bottom: -8px;
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  @include mq(tablet) {
+    bottom: -14px;
+  }
+}

@@ -1,0 +1,16 @@
+.text-block { 
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 50px 0;
+  @include mq(tablet) {
+    padding: 80px 0;
+  }
+  @include mq(desktop) {
+    padding: 130px 0;
+  }
+
+  p {
+    @include pStyles;
+  }
+
+}

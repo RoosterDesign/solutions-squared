@@ -1,0 +1,56 @@
+.btn {
+  background: $buttonBgColour;
+  color: $buttonColour;
+  display: block;
+  font-size: $fontSize--sm;
+  text-decoration: none;
+  transition: background-color .15s ease-in-out;
+  margin: 0;
+  padding: 12px 20px;
+  width: 100%;
+  @include mq(tablet) {
+    font-size: $fontSize--md;
+    min-width: 200px;
+  }
+  @include mq(desktop) {
+      font-size: $fontSize--lg;
+  }   
+
+  &.-hasChevron {
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  &.-centre {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+  }
+
+  &:hover {
+    background: $buttonHoverBgColour;
+  }
+
+  &__chevron {
+    margin-left: 50px;
+
+    &:before {
+      border-style: solid;
+      border-width: 5px 5px 0 0;
+      content: '';
+      display: inline-block;
+      height: 14px;
+      left: 0;
+      position: relative;
+      top: 0;
+      transform: rotate(45deg);
+      width: 14px;
+    }
+
+  }
+
+}

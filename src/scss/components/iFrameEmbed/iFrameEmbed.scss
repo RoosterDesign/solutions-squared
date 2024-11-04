@@ -1,0 +1,17 @@
+.iframe-embed {
+  overflow: auto;
+
+  &.-m-top {
+    margin-top: 20px;
+    @include mq(tablet-lg) {
+      margin-top: 60px;
+    }
+  }
+
+  iframe {
+    border: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+}

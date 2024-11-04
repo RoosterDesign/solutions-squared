@@ -1,0 +1,18 @@
+.map {
+  height: 400px;
+  margin-bottom: 40px;
+  width: 100%;
+  @include mq(tablet) {
+    height: 450px;
+    margin-bottom: 0;
+    width: 60%;
+  }
+  @include mq(tablet-lg) {
+    height: 550px;
+    width: 55%;
+  }
+  @include mq(desktop) {
+    height: 600px;
+    width: 50%;
+  }
+}

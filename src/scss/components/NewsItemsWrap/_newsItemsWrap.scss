@@ -1,0 +1,8 @@
+.news-items-wrap {
+  margin-top: 40px;
+  @include mq(tablet) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+}

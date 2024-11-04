@@ -1,0 +1,8 @@
+.block-icon {
+  display: block;
+  height: auto;
+  margin: 0 auto 20px;
+  @include mq(tablet) {
+    margin-bottom: 30px;
+  }
+}

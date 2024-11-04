@@ -1,0 +1,90 @@
+@import './vendor/normalize';
+
+@import './base/_variables';
+@import './base/_mixins';
+@import './base/_animations';
+
+@import './plugins/slick-slider';
+
+@import './components/Header/_header';
+@import './components/Hamburger/_hamburger';
+@import './components/Navigation/_navigation';
+@import './components/Title/title';
+@import './components/ImageBlock/_imageBlock';
+@import './components/BlockIcon/_blockIcon';
+@import './components/ImageBlockNav/_imageBlockNav';
+@import './components/TextBlock/_textBlock';
+@import './components/Button/_button';
+@import './components/TestimonialBlock/_testimonialBlock';
+@import './components/Testimonial/_testimonial';
+@import './components/ContactBlock/_contactBlock';
+@import './components/NewsItemsWrap/newsItemsWrap';
+@import './components/NewsItem/newsItem';
+@import './components/RevealBlock/revealBlock';
+@import './components/iFrameEmbed/iFrameEmbed';
+@import './components/TwitterFeed/twitterFeed';
+@import './components/Form/form';
+@import './components/GoogleMap/googleMap';
+@import './components/Address/address';
+@import './components/BlogListPage/blogListPage';
+@import './components/BlogArticle/blogArticle';
+@import './components/Pagination/pagination';
+@import './components/Footer/_footer';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $bodyColour;
+  font-family: $bodyFont;
+  font-weight: $fwLight;
+  padding-top: $mobileHeaderHeight;
+  @include mq(tablet) {
+    padding-top: $desktopHeaderHeight;
+  }
+}
+
+.cf {
+  overflow: auto;
+}
+
+.cf::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+p,
+li {
+  line-height: 1.4;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $containerMaxWidth;
+  padding: 0 $containerPaddingMobile;
+  width: 100%;
+
+  @include mq(desktop) {
+    // padding: 0 $containerPaddingDesktop;
+  }
+}

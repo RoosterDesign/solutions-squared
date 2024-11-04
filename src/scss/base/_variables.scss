@@ -1,0 +1,74 @@
+// Colours
+$white: #fff;
+$black: #000;
+$darkGrey: #3c3636;
+$brandOrange: #f38025;
+$borerColour: #cbcbcb;
+
+// Container
+$containerPaddingMobile: 20px;
+// $containerPaddingDesktop: 45px;
+$containerMaxWidth: 1320px;
+
+// Typography
+$bodyFont: 'Source Sans Pro',
+sans-serif;
+
+$fwLight: 300;
+$fwRegular: 400;
+$fwSemiBold: 600;
+$fwBold: 700;
+
+// $titleColour: $brandRed;
+$bodyColour: $black;
+// $linkColour: $brandRed;
+// $linkHoverColour: $black;
+
+$fontSize--sm: 1.8rem;
+$fontSize--md: 2rem;
+$fontSize--lg: 2.5rem;
+
+
+// Links
+$linkColour: $brandOrange;
+$linkHoverColour: $black;
+
+// Header
+$mobileHeaderHeight: 65px;
+$desktopHeaderHeight: 85px;
+$headerBorderColour: $borerColour;
+$headerBorderWidth: 1px;
+$hamburgerColour: $brandOrange;
+$headerLinkColour: $bodyColour;
+$headerLinkHoverColour: $brandOrange;
+
+// Nav
+$navLinkColour: $white;
+$navLinkHoverColour: $white;
+
+// Buttons
+$buttonBgColour: $brandOrange;
+$buttonColour: $white;
+$buttonHoverBgColour: $darkGrey;
+$buttonActiveBgColour: $darkGrey;
+
+// Slick Slider
+$sliderDotBorderColour: $black;
+$sliderDotActiveBorderColour: $brandOrange;
+$sliderDotActiveBgColour: $brandOrange;
+
+// Reveal blocks
+// $revealBgColour: $darkGrey;
+// $revealColour: $white;
+$revealBgColour: #f1f1f1;
+$revealColour: $bodyColour;
+
+
+// Twitter Feed
+$twitterFeedBorderColour: #e1e1e1;
+
+
+// Footer
+$footerBgColour: #f6f6f6;
+$twitterFill: #1da1f2;
+$footerLinkHover: $brandOrange;

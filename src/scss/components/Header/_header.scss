@@ -1,0 +1,103 @@
+.site-header {
+  background: $white;
+  border-bottom: $headerBorderWidth solid $headerBorderColour;
+  height: $mobileHeaderHeight;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  @include mq(tablet) {
+    height: $desktopHeaderHeight;
+  }
+
+  >.container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: inline-block;
+
+    img {
+      height: 35px;
+      @include mq(tablet) {
+        height: 50px;
+      }
+    }
+
+  }
+
+}
+
+
+// Remote Links
+.site-header {
+
+  .remote-links {
+     
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &.-desktop {
+      margin-left: auto;
+      @media only screen and (max-width: 767px) {
+        display: none;
+      }
+
+      ul {
+
+        li {
+          display: inline-flex;
+
+          &:last-of-type {
+            margin-right: 40px;
+            margin-left: 30px;  
+          }
+
+        }
+
+        li a {
+          color: $headerLinkColour;
+          font-size: 1.8rem;
+          text-decoration: none;
+        }
+
+        li a:hover {
+          color: $headerLinkHoverColour;
+        }
+
+      }
+
+    }
+
+    &.-mobile {
+      margin: 20px 0 0;     
+      @include mq(tablet) {
+        display: none;
+      }
+
+      ul {
+
+        li a {
+          font-size: 2rem;
+          font-weight: 500;
+          padding: 10px 0;
+          @include mq(mobile-lg) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}
