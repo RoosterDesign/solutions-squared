@@ -18,7 +18,6 @@ function showReveal() {
   addActiveClass = openBtn => openBtn.classList.add('-isActive');
 
   //  Remove active class
-<<<<<<< HEAD
   removeActiveClass = (parentBlockId) => {
     console.log('parentBlockId', parentBlockId);
     jQuery('.js-reveal-link[data-link-parent='+parentBlockId+']').removeClass('-isActive');
@@ -27,9 +26,6 @@ function showReveal() {
 
   //  Remove default button class
   removeDefaultClass = () => jQuery('.js-reveal-link').removeClass('-isDefault');
-=======
-  removeActiveClass = () => jQuery('.js-reveal-link').removeClass('-isActive');
->>>>>>> main
 
   // Scroll to reveal block
   scrollToReveal = parentBlockId => {
@@ -40,27 +36,17 @@ function showReveal() {
 
   // Scroll back to parent block
   scrollToParent = parentBlockId => jQuery("html, body").animate({ scrollTop: jQuery('#'+parentBlockId).offset().top - getOffset() }, scrollDuration);
-<<<<<<< HEAD
 
   // Open reveal block
   openReveal = (revealBlock, parentBlockId, scrollToBlock = true) => {
-=======
-  
-  // Open reveal block
-  openReveal = (revealBlock, parentBlockId) => {
->>>>>>> main
     if(anyOpen(parentBlockId)) {
       closeAllBlocks(parentBlockId, revealBlock)
     } else {
       openSepcificBlock(revealBlock)
     };
-<<<<<<< HEAD
     if(scrollToBlock) {
         scrollToReveal(parentBlockId);
     }
-=======
-    scrollToReveal(parentBlockId);
->>>>>>> main
   };
 
   closeReveal = (revealBlock, parentBlockId) => {
@@ -70,29 +56,22 @@ function showReveal() {
   };
 
 
-<<<<<<< HEAD
   // Open default reveal block
   const defaultRevealBlock = jQuery('.reveal-block.-isDefault');
-//   console.log('defaultRevealBlock', defaultRevealBlock);
   const parentBlockId = jQuery('.reveal-block.-isDefault')[0].getAttribute('data-parent');
   openReveal(defaultRevealBlock, parentBlockId, false);
 
 
 
-=======
->>>>>>> main
 
   // ====================
   // CLICK EVENTS
   // ====================
 
   // On Open Click Event
-<<<<<<< HEAD
   const revealLinks = document.querySelectorAll('.js-reveal-link');
   for (let i = 0; i < revealLinks.length; i++) {
     const openBtn = revealLinks[i];
-
-    console.log('openBtn', openBtn);
     openBtn.addEventListener('click', e => {
       e.preventDefault();
       const parentBlockId = openBtn.getAttribute('data-link-parent');
@@ -102,19 +81,6 @@ function showReveal() {
       if(!jQuery(openBtn).hasClass('-isActive')) {
         openReveal(revealBlock, parentBlockId);
         removeActiveClass(parentBlockId);
-=======
-  const revealLinks = document.querySelectorAll('.js-reveal-link');  
-  for (let i = 0; i < revealLinks.length; i++) {
-    const openBtn = revealLinks[i];
-    openBtn.addEventListener('click', e => {
-      e.preventDefault();
-      const parentBlockId = openBtn.getAttribute('data-link-parent');
-      const linkRef = openBtn.hash.substr(1);      
-      const revealBlock = jQuery('[data-reveal='+linkRef+']');
-      if(!jQuery(openBtn).hasClass('-isActive')) {
-        openReveal(revealBlock, parentBlockId);
-        removeActiveClass();
->>>>>>> main
         addActiveClass(openBtn);
       };
     });
@@ -122,7 +88,6 @@ function showReveal() {
 
 
   // On Close Click Event
-<<<<<<< HEAD
   const revealClose = document.querySelectorAll('.js-close-reveal');
   for (let i = 0; i < revealClose.length; i++) {
     const closeEl = revealClose[i];
@@ -132,24 +97,9 @@ function showReveal() {
       removeActiveClass(parentBlockId);
       closeReveal(revealBlock, parentBlockId);
     });
-=======
-  const revealClose = document.querySelectorAll('.js-close-reveal');  
-  for (let i = 0; i < revealClose.length; i++) {
-    const closeEl = revealClose[i];
-    const revealBlock = jQuery(closeEl.parentNode);
-    const parentBlockId = closeEl.parentNode.getAttribute('data-parent');    
-    closeEl.addEventListener('click', () => {
-      removeActiveClass();
-      closeReveal(revealBlock, parentBlockId);
-    });    
->>>>>>> main
   };
 };
 
 jQuery(document).ready(function($) {
   showReveal();
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> main
