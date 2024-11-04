@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 Template Name: Homepage
 */
@@ -9,11 +9,11 @@ get_header(); ?>
   <?php include get_theme_file_path("templates/partials/image-block.php"); ?>
   <!-- End: IT Managed Services (block_1) -->
 
-  <!-- Text Block 1 - Security -->  
+  <!-- Text Block 1 - Security -->
   <?php $textBlockID = get_field('text_block_1'); ?>
   <?php include get_theme_file_path("templates/partials/text-block.php"); ?>
-  <!-- End: Text Block 1 - Security --> 
-  
+  <!-- End: Text Block 1 - Security -->
+
   <!-- Managed IT Security Services (block_2) -->
   <?php $blockID = get_field('block_2'); ?>
   <?php include get_theme_file_path("templates/partials/image-block.php"); ?>
@@ -24,11 +24,13 @@ get_header(); ?>
   <?php include get_theme_file_path("templates/partials/image-block.php"); ?>
   <!-- End: Offers (block_7) -->
 
-  <!-- Text Block 2 -->  
+  <!-- Text Block 2 -->
+  <? /*
   <?php $textBlockID = get_field('text_block_2'); ?>
   <?php include get_theme_file_path("templates/partials/text-block.php"); ?>
+  */ ?>
   <!-- End: Text Block 2 -->
-  
+
   <!-- Put the web to work (block_3) -->
   <?php $blockID = get_field('block_3'); ?>
   <?php include get_theme_file_path("templates/partials/image-block.php"); ?>
@@ -52,7 +54,7 @@ get_header(); ?>
 
   <!-- Testimonials -->
   <?php $testimonialsBlock = get_field('testimonials_block'); ?>
-  <?php include get_theme_file_path("templates/partials/testimonials-block.php"); ?>  
+  <?php include get_theme_file_path("templates/partials/testimonials-block.php"); ?>
   <!-- End: Testimonials -->
 
   <!-- News -->
@@ -74,10 +76,10 @@ get_header(); ?>
     <div class="container fade-in-down">
       <h1>Get in touch</h1>
       <?php echo do_shortcode('[contact-form-7 id="198" title="Contact form"]'); ?>
-      <?php include get_theme_file_path("templates/partials/map-address.php"); ?>      
+      <?php include get_theme_file_path("templates/partials/map-address.php"); ?>
     </div>
   </section>
-    
+
   <!-- End: Contact -->
 
 
