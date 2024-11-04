@@ -18,7 +18,14 @@ function showReveal() {
   addActiveClass = openBtn => openBtn.classList.add('-isActive');
 
   //  Remove active class
-  removeActiveClass = () => jQuery('.js-reveal-link').removeClass('-isActive');
+  removeActiveClass = (parentBlockId) => {
+    console.log('parentBlockId', parentBlockId);
+    jQuery('.js-reveal-link[data-link-parent='+parentBlockId+']').removeClass('-isActive');
+  }
+
+
+  //  Remove default button class
+  removeDefaultClass = () => jQuery('.js-reveal-link').removeClass('-isDefault');
 
   // Scroll to reveal block
   scrollToReveal = parentBlockId => {
@@ -29,15 +36,17 @@ function showReveal() {
 
   // Scroll back to parent block
   scrollToParent = parentBlockId => jQuery("html, body").animate({ scrollTop: jQuery('#'+parentBlockId).offset().top - getOffset() }, scrollDuration);
-  
+
   // Open reveal block
-  openReveal = (revealBlock, parentBlockId) => {
+  openReveal = (revealBlock, parentBlockId, scrollToBlock = true) => {
     if(anyOpen(parentBlockId)) {
       closeAllBlocks(parentBlockId, revealBlock)
     } else {
       openSepcificBlock(revealBlock)
     };
-    scrollToReveal(parentBlockId);
+    if(scrollToBlock) {
+        scrollToReveal(parentBlockId);
+    }
   };
 
   closeReveal = (revealBlock, parentBlockId) => {
@@ -47,23 +56,34 @@ function showReveal() {
   };
 
 
+  // Open default reveal block
+  const defaultRevealBlock = jQuery('.reveal-block.-isDefault');
+//   console.log('defaultRevealBlock', defaultRevealBlock);
+  const parentBlockId = jQuery('.reveal-block.-isDefault')[0].getAttribute('data-parent');
+  openReveal(defaultRevealBlock, parentBlockId, false);
+
+
+
 
   // ====================
   // CLICK EVENTS
   // ====================
 
   // On Open Click Event
-  const revealLinks = document.querySelectorAll('.js-reveal-link');  
+  const revealLinks = document.querySelectorAll('.js-reveal-link');
   for (let i = 0; i < revealLinks.length; i++) {
     const openBtn = revealLinks[i];
+
+    console.log('openBtn', openBtn);
     openBtn.addEventListener('click', e => {
       e.preventDefault();
       const parentBlockId = openBtn.getAttribute('data-link-parent');
-      const linkRef = openBtn.hash.substr(1);      
+      const linkRef = openBtn.hash.substr(1);
       const revealBlock = jQuery('[data-reveal='+linkRef+']');
+
       if(!jQuery(openBtn).hasClass('-isActive')) {
         openReveal(revealBlock, parentBlockId);
-        removeActiveClass();
+        removeActiveClass(parentBlockId);
         addActiveClass(openBtn);
       };
     });
@@ -71,15 +91,15 @@ function showReveal() {
 
 
   // On Close Click Event
-  const revealClose = document.querySelectorAll('.js-close-reveal');  
+  const revealClose = document.querySelectorAll('.js-close-reveal');
   for (let i = 0; i < revealClose.length; i++) {
     const closeEl = revealClose[i];
     const revealBlock = jQuery(closeEl.parentNode);
-    const parentBlockId = closeEl.parentNode.getAttribute('data-parent');    
+    const parentBlockId = closeEl.parentNode.getAttribute('data-parent');
     closeEl.addEventListener('click', () => {
-      removeActiveClass();
+      removeActiveClass(parentBlockId);
       closeReveal(revealBlock, parentBlockId);
-    });    
+    });
   };
 };
 
